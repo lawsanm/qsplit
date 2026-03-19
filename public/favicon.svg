@@ -1,8 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <!-- Left Half -->
-  <path d="M 45 10 A 40 40 0 0 0 45 90 Z" fill="#4d7bff" />
-  <!-- Right Top Quarter -->
-  <path d="M 55 10 L 55 45 L 90 45 A 40 40 0 0 0 55 10 Z" fill="#a3c4ff" />
-  <!-- Right Bottom Quarter -->
-  <path d="M 55 55 L 90 55 A 40 40 0 0 1 55 90 Z" fill="#1736d7" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <!-- Primary Blue Gradient matching theme color-primary-500 (#4d7bff) to color-primary-900 (#1833aa) -->
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4d7bff"/>
+      <stop offset="100%" stop-color="#1833aa"/>
+    </linearGradient>
+    
+    <!-- Lighter Highlight matching color-primary-300 (#a3c4ff) to color-primary-500 (#4d7bff) -->
+    <linearGradient id="splitGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a3c4ff"/>
+      <stop offset="100%" stop-color="#4d7bff"/>
+    </linearGradient>
+
+    <!-- Medium Blue Tail matching color-primary-600 (#0066ff) to color-primary-800 (#1736d7) -->
+    <linearGradient id="tailGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0066ff"/>
+      <stop offset="100%" stop-color="#1736d7"/>
+    </linearGradient>
+
+    <!-- Professional subtle drop shadow -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#112267" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Mathematically perfect geometric concentric shapes -->
+  <g filter="url(#shadow)">
+    <!-- Main broken 235-degree Ring representing the "Q" and unity -->
+    <!-- Math Dash = 139.85, Start Rotate = 77.06 -->
+    <circle cx="60" cy="56" r="38" fill="none" stroke="url(#ringGrad)" stroke-width="16" stroke-linecap="round" stroke-dasharray="139.85 1000" transform="rotate(77.06 60 56)" />
+    
+    <!-- The split highlight piece making the "Split" perfectly aligned -->
+    <!-- Math Dash = 13.84, Start Rotate = 352.06 -->
+    <circle cx="60" cy="56" r="38" fill="none" stroke="url(#splitGrad)" stroke-width="16" stroke-linecap="round" stroke-dasharray="13.84 1000" transform="rotate(352.06 60 56)" />
+    
+    <!-- Modern Q Tail emerging precisely from the bottom-right 45-degree gap center -->
+    <path d="M 72 68 L 104 100" stroke="url(#tailGrad)" stroke-width="16" stroke-linecap="round" />
+  </g>
 </svg>
