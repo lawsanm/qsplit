@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Left Half -->
+  <path d="M 45 10 A 40 40 0 0 0 45 90 Z" fill="#4d7bff" />
+  <!-- Right Top Quarter -->
+  <path d="M 55 10 L 55 45 L 90 45 A 40 40 0 0 0 55 10 Z" fill="#a3c4ff" />
+  <!-- Right Bottom Quarter -->
+  <path d="M 55 55 L 90 55 A 40 40 0 0 1 55 90 Z" fill="#1736d7" />
+</svg>

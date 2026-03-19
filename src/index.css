@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary-50: #eef4ff;
+  --color-primary-100: #e0ecff;
+  --color-primary-200: #c6dcff;
+  --color-primary-300: #a3c4ff;
+  --color-primary-400: #7ba2ff;
+  --color-primary-500: #4d7bff;
+  --color-primary-600: #0066ff;
+  --color-primary-700: #1a3eff;
+  --color-primary-800: #1736d7;
+  --color-primary-900: #1833aa;
+  --color-primary-950: #112267;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
