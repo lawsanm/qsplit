@@ -133,6 +133,25 @@ export default function App() {
               Laux
             </span>
           </a>
+
+          <a
+            href="https://www.linkedin.com/in/janagan2k04/"
+            target="_blank"
+            rel="noreferrer"
+            className="text-center text-sm text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 font-medium flex items-center justify-center transition-colors mt-1"
+          >
+            Android Solution by{" "}
+            <span
+              className="ml-1 text-primary-600 dark:text-primary-400"
+              style={{
+                fontFamily: "Caveat, cursive",
+                fontSize: "1.2rem",
+                display: "inline-block"
+              }}
+            >
+              Janagan
+            </span>
+          </a>
         </main>
       </div>
     </div>
