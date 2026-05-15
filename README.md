@@ -2,6 +2,8 @@
 
 A modern, responsive, and aesthetically pleasing web application (and Android app!) built to help groups of friends fairly split food order bills. QSplit seamlessly handles all the complex math for you, including proportional discounts, delivery fee splitting, and exact floor-rounding corrections with remainder distribution.
 
+QSplit fairly distributes shared discounts based on how much each person spent. For example, if a Rs.500 offer is unlocked by a total order above Rs.2000, the discount is proportionally divided instead of equally split ensuring the person who spent more receives a fairer share of the discount. Similarly, rounding corrections are automatically applied to minimize individual impact and ensure the total collected cash matches the bill exactly.
+
 ---
 
 ## ✨ Features
@@ -15,7 +17,7 @@ A modern, responsive, and aesthetically pleasing web application (and Android ap
 - **Precise Rounding Protocol:** Prevents messy currency rounding issues by enforcing floor precision on payable amounts, automatically distributing any `+1` / `-1` remainders to the lowest spenders. The collected cash perfectly matches the target order total!
 - **Dark Mode Support:** A sleek, fully featured Dark Mode toggle that persists preferences seamlessly in your browser's local storage.
 - **Responsive & Modern UI:** Designed with premium fintech-grade aesthetics, featuring tailored custom colors, micro-animations, input focus glows, and polished rounded layouts.
-- **📱 Android App Support:** QSplit is also available as a native Android application, thanks to the Android solution contributed by [Janagan](https://github.com/Janagan).
+- **📱 Android App Support:** QSplit is also available as a native Android application, thanks to the Android solution contributed by [Janagan](https://www.linkedin.com/in/janagan2k04).
 
 ---
 
@@ -95,8 +97,8 @@ The Android solution is located in the `/android` directory, contributed by **Ja
 
 | Role | Contributor |
 |---|---|
-| 🎨 Web App Design & Development | **Laux** ([@lawsanm](https://github.com/lawsanm)) |
-| 📱 Android Solution | **Janagan** — contributed via pull request |
+| 🎨 Web App Design & Development | **Laux** ([@lawsanm](https://lawsan.dev)) |
+| 📱 Android Solution | **Janagan** ([@janagan2k04](https://github.com/janagan2k04))— contributed via pull request |
 
 ---
 
