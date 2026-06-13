@@ -75,11 +75,11 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-200">
-      <div className="pt-4 pb-12 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto font-sans">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-slate-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+      <div className="pt-6 pb-16 px-4 sm:px-6 lg:px-8 max-w-2xl mx-auto">
         <Header theme={theme} toggleTheme={toggleTheme} />
 
-        <main className="animate-fade-in">
+        <main className="animate-fade-in space-y-4">
           <SettingsPanel
             rules={rules}
             updateRules={(newRules) => setRules({ ...rules, ...newRules })}
@@ -95,63 +95,56 @@ export default function App() {
             updateAmount={updateAmount}
           />
 
-          <div className="flex gap-4 mb-8">
+          <div className="flex gap-3">
             <button
               onClick={resetAll}
-              className="px-6 py-4 text-gray-500 dark:text-gray-400 font-semibold rounded-2xl hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              className="px-5 py-3.5 text-gray-500 dark:text-gray-400 font-semibold rounded-2xl border border-gray-200 dark:border-gray-700 hover:bg-white dark:hover:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-200 hover:border-gray-300 dark:hover:border-gray-600 transition-all cursor-pointer text-sm"
             >
               Reset
             </button>
 
             <button
               onClick={handleCalculate}
-              className="flex-1 py-4 flex items-center justify-center gap-2 bg-primary-600 hover:bg-primary-700 text-white font-bold rounded-2xl shadow-lg shadow-primary-500/30 transition-all hover:-translate-y-0.5"
+              className="flex-1 py-3.5 flex items-center justify-center gap-2.5 bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-700 hover:to-primary-600 text-white font-bold rounded-2xl shadow-lg shadow-primary-500/25 transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-primary-500/35 active:translate-y-0 cursor-pointer"
             >
-              <Calculator size={20} />
+              <Calculator size={18} />
               Calculate Bill
             </button>
           </div>
 
           {result && <ResultsBreakdown result={result} />}
 
-          <a
-            href="https://github.com/lawsanm"
-            target="_blank"
-            rel="noreferrer"
-            className="mt-12 text-center text-sm text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 font-medium flex items-center justify-center gap-1.5 transition-colors pointer-events-auto"
-          >
-            made with <span className="text-red-500 animate-pulse">❤️</span> by{" "}
-            <span
-              className="text-primary-600 dark:text-primary-400"
-              style={{
-                fontFamily: "Caveat, cursive",
-                fontSize: "1.4rem",
-                transform: "translateY(-2px)",
-                display: "inline-block"
-              }}
+          <div className="pt-6 pb-2 flex flex-col items-center gap-1">
+            <a
+              href="https://github.com/lawsanm"
+              target="_blank"
+              rel="noreferrer"
+              className="text-center text-sm text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 font-medium flex items-center justify-center gap-1.5 transition-colors"
             >
-              Laux
-            </span>
-          </a>
+              made with <span className="text-red-400 animate-pulse">❤️</span> by{" "}
+              <span
+                className="text-primary-500 dark:text-primary-400"
+                style={{ fontFamily: "Caveat, cursive", fontSize: "1.35rem", transform: "translateY(-1px)", display: "inline-block" }}
+              >
+                Laux
+              </span>
+            </a>
 
-          <a
-            href="https://www.linkedin.com/in/janagan2k04/"
-            target="_blank"
-            rel="noreferrer"
-            className="text-center text-sm text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 font-medium flex items-center justify-center transition-colors mt-1"
-          >
-            Android Solution by{" "}
-            <span
-              className="ml-1 text-primary-600 dark:text-primary-400"
-              style={{
-                fontFamily: "Caveat, cursive",
-                fontSize: "1.2rem",
-                display: "inline-block"
-              }}
+            <a
+              href="https://www.linkedin.com/in/janagan2k04/"
+              target="_blank"
+              rel="noreferrer"
+              className="text-center text-xs text-gray-400 dark:text-gray-600 hover:text-gray-500 dark:hover:text-gray-400 font-medium flex items-center justify-center transition-colors"
             >
-              Janagan
-            </span>
-          </a>
+              Android Solution by{" "}
+              <span
+                className="ml-1 text-primary-500 dark:text-primary-400"
+                style={{ fontFamily: "Caveat, cursive", fontSize: "1.1rem", display: "inline-block" }}
+              >
+                Janagan
+              </span>
+            </a>
+          </div>
         </main>
       </div>
     </div>

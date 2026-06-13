@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Bash(npm install *)",
+      "Bash(uipro init *)",
+      "Skill(ui-ux-pro-max)",
+      "Bash(python skills/ui-ux-pro-max/scripts/search.py \"bill splitting finance calculator group app minimal modern\" --design-system -p \"QSplit\")",
+      "Bash(python .claude/skills/ui-ux-pro-max/scripts/search.py \"bill splitting finance calculator group app minimal modern\" --design-system -p \"QSplit\")",
+      "Bash(npm run *)"
+    ]
+  }
+}

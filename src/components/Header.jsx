@@ -1,24 +1,30 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Moon, Sun, Receipt } from 'lucide-react';
 
 export default function Header({ toggleTheme, theme }) {
   return (
-    <header className="flex items-center justify-between mb-8 pb-4 border-b border-gray-200 dark:border-gray-800">
-      <div className="flex items-center gap-2">
-        <div className="bg-primary-600 p-2 rounded-xl text-white shadow-lg shadow-primary-500/30">
-          <Receipt size={24} />
+    <header className="flex items-center justify-between mb-6">
+      <div className="flex items-center gap-3">
+        <div className="bg-gradient-to-br from-primary-500 to-primary-700 p-2.5 rounded-2xl text-white shadow-lg shadow-primary-500/30">
+          <Receipt size={20} />
         </div>
-        <h1 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400">
-          QSplit
-        </h1>
+        <div>
+          <h1 className="text-xl font-bold text-gray-900 dark:text-white leading-none tracking-tight">
+            QSplit
+          </h1>
+          <p className="text-xs text-gray-400 dark:text-gray-500 mt-0.5">Split bills, fairly</p>
+        </div>
       </div>
-      
+
       <button
         onClick={toggleTheme}
-        className="p-2.5 rounded-full bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors text-gray-600 dark:text-gray-300"
+        className="flex items-center gap-2 pl-2.5 pr-3.5 py-2 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm hover:border-primary-300 dark:hover:border-primary-700 transition-all text-gray-500 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 cursor-pointer"
         aria-label="Toggle dark mode"
       >
-        {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+        {theme === 'dark'
+          ? <Sun size={14} strokeWidth={2.5} />
+          : <Moon size={14} strokeWidth={2.5} />}
+        <span className="text-xs font-semibold">{theme === 'dark' ? 'Light' : 'Dark'}</span>
       </button>
     </header>
   );
